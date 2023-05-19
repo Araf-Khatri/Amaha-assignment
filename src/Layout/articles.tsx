@@ -1,7 +1,5 @@
 import {
-  ElementRef,
   FC,
-  MouseEventHandler,
   SyntheticEvent,
   useEffect,
   useState,
@@ -40,7 +38,7 @@ const Articles: FC<{
   ) => {
     const target = e.target as Element;
     if (!target.closest(".article")) return;
-    
+
     const slug: string | undefined = (target.closest(".article") as HTMLElement)
       .dataset.slug;
     const {
